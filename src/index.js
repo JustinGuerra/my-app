@@ -18,7 +18,7 @@ class Board extends React.Component {
   }
 
   render() {
-    const status = 'Aeryannah is my favorite daughter and I will always love her!';
+    const status = 'Stephanie Vicares is the best girlfriend in the whole world!';
 
     return (
       <div>
