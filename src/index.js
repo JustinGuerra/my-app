@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Square (props) {
     return (
@@ -19,18 +20,23 @@ class Board extends React.Component {
     this.state = {
       squares: Array(9).fill(null),
       xIsNext: true,
+      turn: 0,
     };
   }
 
   handleClick(i) {
     const squares = this.state.squares.slice();
+
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
+    
     squares[i] = this.state.xIsNext ? 'X' : 'O';
+
     this.setState({
       squares: squares,
       xIsNext: !this.state.xIsNext,
+      turn: this.state.turn + 1,
     });
   }
 
@@ -48,7 +54,11 @@ class Board extends React.Component {
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
-    } else {
+    } 
+    else if (this.state.turn >= 9){
+      status = 'Cat won!';
+    }
+    else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
 
@@ -69,6 +79,13 @@ class Board extends React.Component {
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
+        </div>
+        < div className="refresh-button">
+          <button 
+            type="button" class="btn btn-outline-primary"
+            onClick={() => window.location.reload(false)}>
+            Restart!
+          </button>
         </div>
       </div>
     );
