@@ -14,12 +14,12 @@ ol, ul {
 
 .refresh-button{
   margin-top: 10px;
-  margin-left: 175px;
+  margin-left: 65px;
 }
 
 .status {
   font: 40px "Century Gothic", Futura, sans-serif;
-  margin-left: 130px;
+  margin-left: 5px;
   margin-bottom: 10px;
 }
 
@@ -27,15 +27,15 @@ ol, ul {
   background: rgb(255, 255, 255);
   border: 2px solid #999;
   float: left;
-  font-size: 80px;
+  font-size: 40px;
   font-weight: bold;
   line-height: 34px;
-  height: 140px;
+  height: 70px;
   margin-right: 1px;
   margin-top: 1px;
   padding: 0;
   text-align: center;
-  width: 140px;
+  width: 70px;
 }
 
 .square:focus {
@@ -49,7 +49,7 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
-  margin: 30px 30px 30px 30px;
+  margin: 30px 30px 30px 80px;
 }
 
 .game-info {
