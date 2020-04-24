@@ -59,7 +59,7 @@ class Board extends React.Component {
       status = 'Cat won!';
     }
     else {
-      status = (this.state.xIsNext ? 'X' : 'O') + ' Is Next!';
+      status = (this.state.xIsNext ? '"X"' : '"O"') + ' Is Next!';
     }
 
     return (
